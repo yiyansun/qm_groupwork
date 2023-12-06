@@ -6,16 +6,30 @@ from numpy.polynomial.polynomial import Polynomial
 
 import statsmodels.api as sms
 
+
+
 # 数据读入部分
+#airbnb = pd.read_csv(r'C:\Users\15827\Desktop\airbnb_version2.csv')
+#votes = pd.read_csv(r'C:\Users\15827\Desktop\votes_by_party.csv', na_values='')
+#crime = pd.read_csv(r'C:\Users\15827\Desktop\crime.csv')
+#pubs = pd.read_excel(r'C:\Users\15827\Desktop\pubs.xlsx', sheet_name='Sheet1')
+#transport = pd.read_excel(r'C:\Users\15827\Desktop\traffic-flow-borough.xlsx', sheet_name='all vehicles')
+
+# 将需要的数据列合并到 airbnb 表中
+#for borough in airbnb['borough']:
+#    airbnb.loc[airbnb['borough'] == borough, 'crime'] = votes.loc[(crime['borough'] == borough), 'crime'].values
+
+#airbnb = airbnb.dropna()
+
+"""-0
 data = pd.read_csv(r'C:\Users\15827\git_demo\qm_groupwork\data\datasource.csv')
 
-column_1 = 'percent_green'
-column_2 = 'meanpercent_homes_with_good_access'
+column_1 = 'green_area_hectare'
+column_2 = 'patient_ratio'
 
-column_3 = 'patient_ratio'
 
-x = data[column_2].values.reshape(-1, 1)
-y = data[column_3].values
+x = airbnb[column_1].values.reshape(-1, 1)
+y = airbnb[column_2].values
 
 ''' 
 # easier version
